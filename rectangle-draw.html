@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình chữ nhật</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let res = '';
+    for (var i = 0; i<21; i++) {
+        res += '*';
+    }
+    res += '<br/>';
+
+    for (var j = 0; j<5; j++) {
+        res += '*';
+        for (var k = 0; k < 19; k++) {
+            res += '&nbsp&nbsp';
+        }
+        res += '*' + '<br/>';
+    }
+
+    for (var i = 0; i<21; i++) {
+        res += '*';
+    }
+    document.write(res);
+</script>

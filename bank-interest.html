@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let init = parseFloat(prompt('Nhập số tiền ban đầu (VNĐ): '));
+    let rate = parseFloat(prompt('Nhập lãi suất hàng tháng (phần trăm): '));
+    let month = parseInt(prompt('Nhập số tháng: '));
+    for (var i = 0; i < month; i++) {
+        init = init * (1 + rate / 100);
+    }
+    alert('Số tiền sau '+ month + ' tháng'+' bằng '+init.toFixed(0)+' VNĐ');
+</script>

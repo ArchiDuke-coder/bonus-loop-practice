@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác vuông</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let star = 1;
+    let bl = 5;
+    let res2 = '';
+    while(true){
+        for (var i = 0; i < star; i++) {
+            res2 += '&nbsp&nbsp';
+        }
+        for (var j = 0; j<bl;j++){
+            res2 += '*';
+        }
+        res2 += '<br/>';
+        star++;
+        bl--;
+        if (star > 5){
+            break;
+        }
+    }
+    document.write(res2);
+
+</script>
