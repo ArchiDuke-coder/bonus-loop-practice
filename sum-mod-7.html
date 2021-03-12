@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng các số %7</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var i = 1;
+    var targetCount = 30;
+    var sum = 0;
+    var text = targetCount + ' số đầu tiên chia hết cho 7 là ';
+    while (i<=targetCount){
+        var num = 7 * i;
+        sum += num;
+        text += num + ', ';
+        i++;
+    }
+    document.write(text + '<br/>');
+    document.write('Tổng = '+sum);
+</script>

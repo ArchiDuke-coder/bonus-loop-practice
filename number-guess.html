@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+    <h2 style="position: relative; left: 20px">Game đoán số</h2>
+    <button style = "color: white; font-size: 14pt;background-color: green; width: 200px; height: 50px;"
+            id = 'init' onclick = 'main()'> Chơi </button>
+</body>
+</html>
+<script>
+    function main(){
+        //khởi tạo min, max và kết quả random
+        var min = parseInt(prompt('Nhập cận dưới: '));
+        var max = parseInt(prompt('Nhập cận trên: '));
+        while (min >= max-1){
+            max = parseInt(prompt('Nhập lại cận trên (lớn hơn cận dưới ít nhất 2 đơn vị): '));
+        }
+        var result = Math.round(Math.random()*(max-min) + min);
+        //quá trình chơi
+        var count = 3;
+        var i = 0;
+        var answer = false;
+        while ( i < count) {
+            var guess = parseInt(prompt('Đoán xem: '));
+            i++;
+            if (guess == result) {
+                alert('Đúng rồi');
+                answer = true;
+                break;
+            } else if (guess< result){
+                alert('Sai, số quá bé');
+            } else {
+                alert('Sai, số quá lớn');
+            }
+        }
+        if (answer == false){
+            alert('Sai 3 lần, kết quả là '+ result);
+        }
+        document.getElementById('init').innerHTML = 'Chơi lại';
+    }
+</script>

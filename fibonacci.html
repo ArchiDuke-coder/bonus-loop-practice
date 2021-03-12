@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị dãy Fibonacci</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var num1 = 1;
+    var num2 = 1;
+    var count=2;
+    var targetCount = 20;
+    var text = '20 số Fibonacci đầu tiên là: ' +num1 +', '+ num2 +', ';
+    while (count< targetCount){
+        var num = num1 + num2;
+        text += num + ', ';
+        num1 = num2;
+        num2 = num;
+        count++;
+    }
+    document.write(text);
+</script>
